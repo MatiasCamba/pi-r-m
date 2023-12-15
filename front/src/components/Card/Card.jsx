@@ -47,7 +47,7 @@ export const Card = ({ character, onClose, addFav, removeFav, myFavorites }) => 
             <p className={style.cardOrigin}>{character.origin.name}</p>
 
             <img className={style.cardImage} src={character.image} alt="imagen de personaje de rick y morty" />
-            <hr />
+            
             <button className={style.cardButton} onClick={() => onClose(character.id)}>X</button>
         </div>
     )

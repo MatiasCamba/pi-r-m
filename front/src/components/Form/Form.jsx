@@ -31,10 +31,10 @@ const Form = ({onLogin}) => {
 
     return (
         <form action="" className={style.formContainer}>
-            <label htmlFor="email">Email</label>
+            <label className={style.formText} htmlFor="email">Email</label>
                  <input  className={style.formEmail} type="email" name="email" value={userData.email} onChange={handleChange}/>
 
-            <label htmlFor="password">Password</label>
+            <label className={style.formText} htmlFor="password">Password</label>
                 <input className={style.formPassword}type="password" name="password" value={userData.password} onChange={handleChange}/>
 
             <button className={style.formButton} onClick={handleSubmit}>Enviar</button>

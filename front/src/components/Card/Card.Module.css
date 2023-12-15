@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 20px;
+  margin: 10px;
   background-color: #4caf4c;
   border: 3px solid rgb(248, 246, 246);
 }
@@ -33,9 +34,9 @@
 }
 
  .cardName {
-  font-size: 24px;
+  font-size: 44px;
   font-weight: bold;
-  color: black;
+  color: white;
   margin-top: 10px;
 }
 
@@ -61,14 +62,14 @@
 }
 
 .cardButton {
-  width: 100px;
-  height: 40px;
+  width: 30px;
+  height: 20px;
   border: none;
   border-radius: 20%;
   margin-top: 20px;
-  background-color: coral;
-  color: black;
-  font-size: 20px;
+  background-color: rgb(94, 88, 87);
+  color: white;
+  font-size: 15px;
   font-weight: normal;
   cursor: pointer;
 }

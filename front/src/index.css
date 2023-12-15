@@ -1,10 +1,10 @@
  @font-face {
-  font-family: "get_schwifty";
-  src: url(./assets/Fonts/get_schwifty.ttf) format('truetype');
+  font-family: "Afacad-VariableFont_wght";
+  src: url(./assets/Fonts/Afacad-VariableFont_wght.ttf) format('truetype');
  }
  
  :root {
-  font-family: get_schwifty;
+  font-family:Afacad-VariableFont_wght;
   line-height: 4;
   font-weight: 300;
 
