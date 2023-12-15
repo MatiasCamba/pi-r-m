@@ -1,5 +1,5 @@
 import React from "react";
-import style from './Card.Module.css';
+import style from './Card.module.css';
 import { Link } from 'react-router-dom';
 import { addFav, removeFav } from '../../redux/actions'
 import { useState, useEffect } from "react";
@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 
 
 
-export const Card = ({ character, onClose, addFav, removeFav, myFavorites}) => {
+export const Card = ({ character, onClose, addFav, removeFav, myFavorites }) => {
     const [isFav, setIsFav] = useState(false);
 
     const handleFavorite = () => {
@@ -20,31 +20,35 @@ export const Card = ({ character, onClose, addFav, removeFav, myFavorites}) => {
         }
     }
     useEffect(() => {
-        myFavorites.forEach((fav) => {
-           if (fav.id === character.id) {
-              setIsFav(true);
-           }
+        myFavorites?.forEach((fav) => {
+            if (fav.id === character.id) {
+                setIsFav(true);
+            }
         });
-     }, [myFavorites]);
-    
+    }, [myFavorites]);
+
     return (
 
-        <div className={style.cardContainer}>
+        <div className={`${style.cardContainer} ${style.card}`}>
+
             {
                 isFav ? (
-                    <button onClick={handleFavorite}>❤️</button>
+                    <button className={style.favButton} onClick={handleFavorite}>❤️</button>
                 ) : (
-                    <button onClick={handleFavorite}>🤍</button>
+                    <button className={style.favButton} onClick={handleFavorite}>🤍</button>
                 )
             }
-            <h2>{character.id}</h2>
+            <h2 className={style.cardId}>{character.id}</h2>
             <Link to={`/Detail/${character.id}`}>
-                <h3>{character.name}</h3>
+                <h3 className={style.cardName}>{character.name}</h3>
             </Link>
-            <p>{character.status}</p>
-            <p>{character.origin.name}</p>
-            <img src={character.image} alt="imagen de personaje de rick y morty" />
-            <button onClick={() => onClose(character.id)}>X</button>
+
+            <p className={style.cardStatus}>{character.status}</p>
+            <p className={style.cardOrigin}>{character.origin.name}</p>
+
+            <img className={style.cardImage} src={character.image} alt="imagen de personaje de rick y morty" />
+            <hr />
+            <button className={style.cardButton} onClick={() => onClose(character.id)}>X</button>
         </div>
     )
 

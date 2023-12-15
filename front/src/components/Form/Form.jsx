@@ -1,4 +1,5 @@
 import { useState } from "react";
+import style from './Form.module.css'
 
 
 
@@ -29,14 +30,14 @@ const Form = ({onLogin}) => {
     }
 
     return (
-        <form action="">
+        <form action="" className={style.formContainer}>
             <label htmlFor="email">Email</label>
-                 <input type="email" name="email" value={userData.email} onChange={handleChange}/>
+                 <input  className={style.formEmail} type="email" name="email" value={userData.email} onChange={handleChange}/>
 
             <label htmlFor="password">Password</label>
-                <input type="password" name="password" value={userData.password} onChange={handleChange}/>
+                <input className={style.formPassword}type="password" name="password" value={userData.password} onChange={handleChange}/>
 
-            <button onClick={handleSubmit}>Enviar</button>
+            <button className={style.formButton} onClick={handleSubmit}>Enviar</button>
          
         </form>
     )

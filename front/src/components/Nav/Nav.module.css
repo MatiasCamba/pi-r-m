@@ -1,37 +1,37 @@
 
 
-.navContainer{
- display: flex;
- justify-content: space-between;
- align-items: center;
- padding: 10px;
-background-color: #333;
-color: white;
-   
-}
-
-.imgLogo{
- width: 150px;
- height: 120px;
-}
-
-.searchContainer{
-   margin-left: 20px;
-}
-
-.randomButton{
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .imgLogo {
+    width: 150px;
+    height: 120px;
+  }
+  
+  .searchContainer {
+    margin-left: 20px;
+  }
+  
+  .randomButton {
     background-color: #4caf4c;
     color: white;
     padding: 10px 20px;
-    border:none;
+    border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.5s ease;
-    
+  }
   
-    
-    
-}
+  .randomButton:hover {
+    background-color: #45a049;
+  }
+  
 
 .randomButton:hover {
     background-color: #45a049; 

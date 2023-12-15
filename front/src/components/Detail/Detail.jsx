@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {useParams} from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import style from './Detail.module.css'
 
 
 const Detail = () =>{
@@ -21,8 +22,11 @@ const Detail = () =>{
      }, [id]);
     
     return(
-        <div>
-            <h1>{character.name}</h1>
+        <div className={style.detailContainer}>
+            <h1 className={style.detailTitle}>{character.name}</h1>
+            <hr />
+            <img className={style.detailImage}src={character.image} alt={`imagen de ${character.name} de rick and morty`} />
+            <p className={style.details}>{character.status}</p>
         </div>
     )
 }

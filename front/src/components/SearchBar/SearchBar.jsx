@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import style from './SearchBar.module.css'
 
 
 
@@ -21,9 +22,9 @@ const SearchBar = ({onSearch}) =>{
     }
     
     return (
-        <div>
-            <input value={id} type="search" placeholder="escribi el personaje" onChange={handleChange}/>
-            <button onClick={handleClick}>Buscar</button>
+        <div className={style.searchContainer}>
+            <input className={style.searchInput}value={id} type="search" placeholder="escribi el personaje" onChange={handleChange}/>
+            <button className={style.searchButton} onClick={handleClick}>Buscar</button>
         </div>
     )
 

@@ -1,8 +1,8 @@
 .cardContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-    background-color:  #4caf4c;
-    border: red;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #4caf4c;
+  border: 3px solid rgb(248, 246, 246);
+}

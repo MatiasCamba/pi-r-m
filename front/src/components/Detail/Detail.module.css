@@ -1,0 +1,24 @@
+.detailContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #4caf4c;
+    border: 3px solid rgb(248, 246, 246);
+}
+.detailTitle{
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+}
+.detailImage{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.details{
+    font-size: 30px;
+    font-weight: bolder;
+    color: rgb(201, 245, 151);
+}
