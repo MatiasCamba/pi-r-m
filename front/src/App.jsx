@@ -15,16 +15,16 @@ import Favorites from './components/Favorites/Favorites'
 
 function App() {
    const [characters, setCharacters] = useState([]);
-   const APIKEY = 'pi-matiascamba';
+   //const APIKEY = 'pi-matiascamba';
    const location = useLocation();
    const [access, setAccess] = useState(false);
-   const email = "matias@gmail.com";
-   const password = "1234";
+   const email = "";
+   const password = "";
    const navigate = useNavigate();
    
 
    function onSearch(id) {
-      axios(`https://rym2.up.railway.app/api/character/${id}?key=${APIKEY}`).then(
+      axios(`http://localhost:3001/rickandmorty/character/${id}`).then(
          ({ data }) => {
             const repeated = characters.some(characters => characters.id === data.id)
             if (data.name && !repeated) {

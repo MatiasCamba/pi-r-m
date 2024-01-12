@@ -6,7 +6,7 @@ const CardContainer = (props) =>{
     return (
         <div className={style.cardContainer}>
            {props.characters.map((character)=>
-            <Card character={character}  key={character.id} onClose={props.onClose}/>
+            <Card  key={character.id} character={character}  onClose={props.onClose}/>
            )}
         </div>
     )

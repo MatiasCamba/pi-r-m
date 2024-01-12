@@ -7,9 +7,9 @@ import style from './Detail.module.css'
 const Detail = () =>{
     const [character,setCharacter] = useState({});
     const {id} = useParams();
-    const APIKEY = 'pi-matiascamba';
+    //const APIKEY = 'pi-matiascamba';
     useEffect(() => {
-        axios(`https://rym2.up.railway.app/api/character/${id}?key=${APIKEY}`).then(
+        axios(`http://localhost:3001/rickandmorty/character/${id}`).then(
            ({ data }) => {
               if (data.name) {
                  setCharacter(data);
