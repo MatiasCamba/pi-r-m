@@ -18,14 +18,9 @@ const rootReducer = (state = initialState, action) => {
             };
 
         case REMOVE_FAV:
-            let favoritesFiltered = state.allCharacters.filter((character) => {
-                return character.id !== parseInt(action.payload);
-            })
-            return {
-                ...state,
-                myFavorites: favoritesFiltered,
-                allCharacters: favoritesFiltered,
-            };
+            return { ...state, myFavorites: action.payload };
+
+
         case FILTER_FAVS:
             let copyFilter = [...state.allCharacters];
             let filteredFavs = copyFilter.filter((character) => {

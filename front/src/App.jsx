@@ -18,11 +18,34 @@ function App() {
    //const APIKEY = 'pi-matiascamba';
    const location = useLocation();
    const [access, setAccess] = useState(false);
-   const email = "";
-   const password = "";
+   const email = "matias@gmail.com";
+   const password = "1234";
+   const URL = 'http://localhost:3001/rickandmorty/'
    const navigate = useNavigate();
    
-
+   function login({email,password}) {
+      
+     
+      axios(`${URL}login?email=${email}&password=${password}`).then(({ data }) => {
+         const { access } = data;
+         setAccess(access);
+         if(access){
+            navigate('/home')
+         }else{
+            alert('Datos incorrectos, intenta nuevamente')
+         }
+      });
+   } 
+/*    function login(userData) {
+      const { email, password } = userData;
+      const URL = 'http://localhost:3001/rickandmorty/login/';
+      axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+         const { access } = data;
+         setAccess(data);
+         access && navigate('/home');
+      });
+   } */
+   
    function onSearch(id) {
       axios(`http://localhost:3001/rickandmorty/character/${id}`).then(
          ({ data }) => {
@@ -44,17 +67,6 @@ function App() {
       setCharacters(deleted)
    }
 
-   function login(userData){
-      
-     if(userData.email === email && userData.password === password){
-      setAccess(true)
-      navigate('/Home');
-     }else{
-      alert("usuario invalido!")
-     }
-      
-
-   }
    function logOut(){
       setAccess(false);
       navigate('/');
